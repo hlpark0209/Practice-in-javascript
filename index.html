@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>🎉CSS Units🎉</h1>  
+    <div id="contents">
+        <div class="unit1">
+            <h3>px ( absolute )</h3>
+            <p>Avoid using 'px' for font-size <br>
+               Use mostly for small details like border and shadow.
+            </p>
+
+            <ul>
+                <li>fixed in size</li>
+                <li>not responsive</li>
+                <li>overrides user's browser perferences</li>
+            </ul>
+        </div>
+        <div class="unit2">
+            <h3>% ( relateive )</h3>
+            <p>I recommend using percentages for layouts and width.height.<br>
+               For example, laying out links on havbar, placing images inside a div, ets.
+            </p>
+
+            <ul>
+                <li>size is defined as percentage of another value ( mostly parent element )</li>
+                <li>somethimes size is defined as percentage of the element itself</li>
+            </ul>
+        </div>
+        <div class="unit3">
+            <h3>em ( relateive )</h3>
+            <p>You can use 'em' for font-size and margin/padding.<br>
+               Use it when you want to adjust margin/padding based on that element's font-size<br>
+               ( if font-size is big, you maybe want bigger spacing. )
+            </p>
+
+            <ul>
+                <li>changes behavior based on property.</li>
+                <li>1 em == parent font-size</li>
+                <li>If parent doesn't have a size, defaults to 16px (boxy) </li>
+            </ul>
+        </div>
+        <div class="unit4">
+            <h3>rem ( relateive )</h3>
+            <p>You can also use it for font-size and margin/padding<br>
+               It is easier to work with than 'em' because it's more consistent.
+            </p>
+
+            <ul>
+                <li>relative to root HTML, no matter what (default is 16px)</li>
+                <li>you can change the root HTML, size. for example, if you change it to 20px, 1 rem will always be 20px</li>
+            </ul>
+        </div>
+        <div class="unit5">
+            <h3>vw/vh ( relateive )</h3>
+            <p>vw/vh are relative to the width/height fo the browser window<br>
+               100vw means full width of the screen. Use vw/vh for bigger layouts, like background.
+            </p>
+
+            <ul>
+                <li>useful for responsive wwebsites because everything scales.</li>
+            </ul>
+        </div>
+        <div class="unit6">
+            <h3>ch </h3>
+            <p>It is relative to the width of the number 0 of the current font.<br>
+               'ch' is used to size the width of a paragrach. In general, you want a 45-70 character wide column for readability.
+            </p>
+
+            <ul>
+                <li>You would use it likt this : max- width 40ch;</li>
+                <li>This sets the width of the column to ad maximum of 40 characters per line.</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+</html>

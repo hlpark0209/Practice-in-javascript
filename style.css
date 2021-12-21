@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap');
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+    color: #1a1a1a;
+}
+
+h1{
+    text-align: center;
+}
+p{
+    text-align: left;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+h3{
+    text-align: left;
+    margin: 0px;
+}
+ul{
+    padding: 1rem;
+    margin: 0px;
+}
+
+#contents{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+div{
+    flex:1 1 25%;
+    text-align: center;
+    margin: 1.2rem;
+    padding: 1.3rem;
+    border-radius: 20px;
+}
+
+ul li{
+    text-align: left;
+}
+
+.unit1{
+    background-color:rgb(255, 185, 185);
+}
+.unit2{
+    background-color:rgb(255, 202, 184);   
+}
+
+.unit3{
+    background-color:rgb(255, 228, 193);    
+}
+
+.unit4{
+    background-color:rgb(225, 255, 225);    
+}
+
+.unit5{
+    background-color:rgb(210, 236, 245)
+}
+
+.unit6{
+    background-color:rgb(255, 210, 255);
+}
+
+
+/* Media query desktop ver.*/
+@media (min-width:1281px) {
+    h3{font-size: 1.5rem;}
+    p{font-size:1rem;}
+    ul li{font-size:1rem;}
+}
+
+/* Media query tablet, ipad ver.*/
+@media screen and (min-width:768px) and  (max-width:1280px) {
+    h3{font-size: 1.2rem;}
+    p{font-size:1rem;}
+    ul li{font-size:0.9rem;}
+    div{flex:1 1 30%;}
+}
+
+/* Media query mobile ver.*/
+@media (max-width:767px) {
+    h3{font-size: 1.3rem;}
+    p{font-size:1rem;}
+    ul li{font-size:1rem;}
+    div{flex-direction: column;}
+}
+
+
+
+
