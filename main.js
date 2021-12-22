@@ -1,6 +1,6 @@
 'use strict';
 
-/* class Counter{
+class Counter{
     constructor(runEveryFiveTimes){
         this.counter = 0;
         this.callback = runEveryFiveTimes;
@@ -53,24 +53,9 @@ class Hero{
         this.w = 구멍2; 
     }
 }
-new Hero(); // object 생성 */
+new Hero(); // object 생성
 
 
 
 
-
-
-
-// 12/21 : eventlistener 
-// ID 입력하기 버튼을 누르면 BOX에 해당 텍스트 구현
-
-const btn1 = document.querySelector('.btn1');
-
-// function pushBtn(e){
-//     console.log(e);
-// };
-
-btn1.addEventListener('click', function(){
-    console.log('click');
-});
 
