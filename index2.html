@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Practice in javascript</title>
     <style>
         .container{
         width: 300px;
@@ -21,6 +21,17 @@
         background-color:rgb(168, 198, 255);
         }
 
+        .box{
+            width: 100px;
+            height: 100px;
+            background:darkseagreen;
+            margin-bottom: 3px;
+        }
+        .box6{
+            background:yellowgreen;
+        }
+
+
     </style>
 </head>
 <body>
@@ -35,10 +46,25 @@
 
 
     <!-- Mark a window size -->
-    <h2>2.  Mark a window size</h2>
+    <h2>2. Mark a window size</h2>
     <div class="container2">
     </div>
 
+    <!-- window 좌표 찾기 -->
+    <h2>3. window 좌표 찾기</h2>
+    <div class="container3">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box box6"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
 
 
 
@@ -97,6 +123,33 @@
             window.addEventListener('resize',upDate);  // resize될떄 실행)
 
             upDate();  //가장 먼저 실행
+
+
+
+
+
+            // window 좌표 찾기
+            const box = document.querySelector('.box6');
+            const domRect = box.getBoundingClientRect();
+
+            function eventFn(e){
+                console.log(
+                    `Client : ${e.clientX}, ${e.clientY}`
+                );
+                console.log(
+                    `Page : ${e.pageX}, ${e.pageY}`
+                );
+                console.log(domRect);
+                
+            }
+
+            box.addEventListener('click', eventFn);
+
+
+
+
+
+
             
     </script>
 </body>
