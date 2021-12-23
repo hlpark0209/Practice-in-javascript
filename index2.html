@@ -21,16 +21,47 @@
         background-color:rgb(168, 198, 255);
         }
 
-        .box{
+        .container3 .box{
             width: 100px;
             height: 100px;
             background:darkseagreen;
             margin-bottom: 3px;
         }
-        .box6{
+        .container3 .box6{
             background:yellowgreen;
         }
 
+        .container4{
+            position: relative;
+        }
+        .container4 .box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 3px;
+            background:indianred;
+        }
+        .container4 .special{
+            background:khaki;
+        }
+        .container4 .scrollby{
+            margin-bottom: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .container4 .scrollto{
+            margin-bottom: 20px;
+            position: fixed;
+            top: 0;
+            left: 100px;
+        }
+        .container4 .scrollinto{
+            margin-bottom: 20px;
+            position: fixed;
+            top: 0;
+            left: 170px;
+        }
+        
 
     </style>
 </head>
@@ -65,6 +96,36 @@
         <div class="box"></div>
         <div class="box"></div>
     </div>
+    
+
+        <!-- window scroll event -->
+        <h2>4. window scroll event</h2>
+
+       
+        <div class="container4">
+            <button class=" btn scrollby">scrollby 50px</button>
+            <button class="btn scrollto">scrollto</button>
+            <button class="btn scrollinto">scrollinto</button>
+
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box special"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        
+        </div>
 
 
 
@@ -120,9 +181,11 @@
                 content width : ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}<br>`;
             }
 
-            window.addEventListener('resize',upDate);  // resize될떄 실행)
+            window.addEventListener('resize',upDate);  // resize될떄 실행
 
             upDate();  //가장 먼저 실행
+
+
 
 
 
@@ -149,6 +212,30 @@
 
 
 
+            
+
+            // window scrdoll event
+            const scrollby = document.querySelector('.scrollby');
+            const scrollto = document.querySelector('.scrollto');
+            const scrollinto = document.querySelector('.scrollinto');
+            const special = document.querySelector('.special');
+            
+            function scrollMove() {
+                window.scrollBy( 0, 50 );
+            };
+
+            function scrollJump(){
+                 window.scrollTo(100, 500);
+             }
+
+             function scrollSpecial(){
+                special.scrollIntoView();
+             }
+
+
+            scrollby.addEventListener('click', scrollMove);
+            scrollto.addEventListener('click', scrollJump);
+            scrollinto.addEventListener('click', scrollSpecial); 
 
             
     </script>
