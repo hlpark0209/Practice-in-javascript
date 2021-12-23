@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coordinate</title>
+    <style>
+        body{
+            cursor: url("img/target.png"), auto;
+            position:absolute;
+            width:100%;
+            height:100%;
+            translate: (-50%, -50%);
+            background: rgb(51, 51, 51);
+        }
+        h2{
+            color: #fff;
+        }
+        .width{
+            position: absolute;
+            top:0;
+            bottom: 0;
+            width: 1px;
+            /* height: 100%; */
+            background: #fff;
+        }
+        .height{
+            position: absolute;
+            left:0;
+            right: 0;
+            height: 1px;
+            /* width: 100%; */
+            background: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Mouse Target</h2>
+    <div class="contain">
+        <div class="width"></div>
+        <div class="height"></div>
+    </div> 
+
+<script>
+    const width = document.querySelector('.width');
+    const height = document.querySelector('.height');
+    
+    function mouseTarget(e){
+        //console.log( `브라우저 좌표 : ${e.clientX}, ${e.clientX} `);
+        width.setAttribute('style', `left : ${e.clientX}px;`);
+        height.setAttribute('style', `top : ${e.clientY}px;`);
+        
+    }
+    window.addEventListener('mousemove',mouseTarget);
+    
+
+</script>
+    
+</body>
+</html>
