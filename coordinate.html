@@ -7,51 +7,63 @@
     <title>coordinate</title>
     <style>
         body{
-            cursor: url("img/target.png"), auto;
-            position:absolute;
-            width:100%;
-            height:100%;
-            translate: (-50%, -50%);
             background: rgb(51, 51, 51);
+            
         }
-        h2{
-            color: #fff;
+        .target{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .width{
             position: absolute;
-            top:0;
-            bottom: 0;
+            left:50%;
             width: 1px;
-            /* height: 100%; */
+            height: 100%; 
             background: #fff;
         }
         .height{
             position: absolute;
-            left:0;
-            right: 0;
+            top:50%;
             height: 1px;
-            /* width: 100%; */
+            width: 100%; 
             background: #fff;
+        }
+        .tag{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(20px, 20px);
+            color: #fff;
+            font-size: medium;
         }
 
     </style>
 </head>
 <body>
-    <h2>Mouse Target</h2>
-    <div class="contain">
         <div class="width"></div>
         <div class="height"></div>
-    </div> 
+        <img src="img/target.png" alt="target" class="target">
+        <div class="tag"></div>
 
 <script>
     const width = document.querySelector('.width');
     const height = document.querySelector('.height');
+    const target = document.querySelector('.target');
+    const tag = document.querySelector('.tag');
     
     function mouseTarget(e){
-        //console.log( `브라우저 좌표 : ${e.clientX}, ${e.clientX} `);
-        width.setAttribute('style', `left : ${e.clientX}px;`);
-        height.setAttribute('style', `top : ${e.clientY}px;`);
-        
+        const x = e.clientX;
+        const y = e.clientY;
+
+        width.style.left = `${x}px`;
+        height.style.top = `${y}px`;
+        target.style.left = `${x}px`;
+        target.style.top = `${y}px`;
+        tag.style.left = `${x}px`;
+        tag.style.top = `${y}px`;
+        tag.innerHTML = `${x}px, ${y}px`;
     }
     window.addEventListener('mousemove',mouseTarget);
     
