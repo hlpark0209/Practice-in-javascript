@@ -37,6 +37,112 @@
 
 // 3. Spread 구문을 활용해서 myChoice의 각 요소들을 printArguments 함수의 아규먼트로 전달
     printArguments(...myChoice);
+
+
+
+
+
+
+
+    console.log('---------------------');
+
+
+
+
+
+
+// 객체 생성 연습
+// 1. object literal
+var myObj = {
+    name: 'hylee',
+    age : 26,
+    buy (item){
+    console.log(`${this.name} buys ${item.name}`);
+  },    
+};
+
+const item = {
+    name: 'skirt',
+    price : 10000,
+}
+
+console.log(myObj);
+myObj.buy(item);
+
+
+// 2. Factory funtion
+
+function create ( name, age ){
+var myObj = {
+    name: name,
+    age : age,
+
+    buy (item2){
+        console.log(`${this.name} buys ${item2.name}`)
+        },
+    };
+    return myObj;
+}
+
+const item2 = {
+    name: 'skirt',
+    price : 10000,
+}
+
+
+const user1 = create( 'sungbum', 31);
+console.log(user1);
+user1.buy(item2);
+
+
+
+
+// 3. consturctor function
+function Uer ( name, age ){
+this.name = name;
+this.age = age;
+this.intro = function (){
+    console.log( `${this.name} is ${this.age} years old. `);
+    };
+}
+
+const user2 = new Uer( 'minhuck', 23 );
+const user3 = new Uer( 'hyeryun', 29 );
+
+console.log(user2.name);
+user2.intro();
+console.log(user3);
+user3.intro();
+
+
+// 4. class 
+// constructor 안에 property정의, method는 밖에 정의
+class List {
+    constructor( name, type, price ){
+        this.name = name;
+        this.type = type;
+        this.price = price;
+    }
+    contents (){
+        console.log( ` ${this.name} is ${this.type} type and price is ${this.price} ` );
+    }
+}
+
+const list1 = new List ('Book', 'A', 30000); 
+
+list1.contents();
+
+
+
+
+
+
+
+
+
+
+
+
     </script>
 </body>
 </html>
