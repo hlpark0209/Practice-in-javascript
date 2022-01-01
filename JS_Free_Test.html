@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code it practice in JS </title>
 </head>
 <body>
     <script>
@@ -134,12 +134,44 @@ list1.contents();
 
 
 
+// 추상화 개념
 
+class BankAccount {
+    // 계좌 이름과 돈 프로퍼티 생성
+    constructor(name, money) {
+        this.holder = name;
+        this.balance = money;
+    }
+    // 예금 메소드 : 잔금에 돈을 추가
+    deposit(money) {
+        this.balance += money;
+    }
 
+    // 인출 메소드
+    withdraw(money) {
+        // 잔금에서 뺴려고하는 돈의 금액이 적다면 Insufficient balance 출력
+        if (this.balance - money < 0) {
+        console.log('Insufficient balance');
+        // 그렇지 않다면 잔돈에서 돈을 뺌
+        } else {
+        this.balance -= money;
+        }
+    }
 
-
-
-
+    //계좌 이체 메소드
+    transfer(money, anotherAccount) {
+        //상대 계좌를 account로 정의
+        const account = anotherAccount;
+        // 만약 잔금이 없다면 Insufficient balance 출력
+        if (this.balance - money < 0) {
+        console.log('Insufficient balance');
+        // 그렇지 않다면 잔금에서 돈을 뺴고, 상대 계좌에 추가금액을 이체
+        } else {
+        this.balance -= money;
+        account.balance += money;
+        }
+    }
+}
 
 
 
