@@ -1,4 +1,4 @@
 # Practice-in-javascript
 Practice in javascript
 
-Various games exercise in javascript 
+Various exercise in javascript for free 
