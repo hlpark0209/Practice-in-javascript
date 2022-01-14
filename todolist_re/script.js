@@ -43,9 +43,13 @@ document.addEventListener('keydown', () => {
 //3. 삭제기능
 list.addEventListener('click', (e) => {
     const id = e.target.dataset.id;
-    console.log(id);
     if( id ){
-        const del = document.querySelector(`.text[data-id="${id}"]`);
-        console.log(del);
+        // const del = document.querySelector(`.fas[data-id="${id}"]`);
+        const delLi = document.querySelector('.text');
+        const delLine = document.querySelector('.line');
+        delLi.remove();
+        delLine.remove();
     }
 });
+
+list.scrollIntoView(); 
