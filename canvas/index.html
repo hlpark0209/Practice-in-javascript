@@ -8,8 +8,25 @@
     <title>Canvas</title>
 </head>
 <style>
-    .canvasFill, .canvasStroke, .canvasCircle, .canvasImage{
+    .canvasFill, .canvasStroke, .canvasCircle, .canvasImage, .canvasPaint{
         background-color:#eee;
+    }
+    .colorBtn, .colorImg{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border:0;
+        margin-top: 10px;
+        cursor: pointer;
+        
+    }
+    .colorBtn[data-color="black"]{ background-color: black;}
+    .colorBtn[data-color="red"]{ background-color: red;}
+    .colorBtn[data-color="yellow"]{ background-color: yellow;}
+    .colorBtn[data-color="blue"]{ background-color: blue;}
+    .colorImg{
+        background: url(momin.png) no-repeat 50% 50% / cover;
+        border: 1px solid #ddd;
     }
 </style>
 <body>
@@ -25,6 +42,17 @@
 
     <h2>Image</h2>
     <canvas class="canvasImage" width="600" height="400"></canvas>
+
+    <h2>그림판</h2>
+    <canvas class="canvasPaint" width="600" height="400"></canvas>
+    <div class="control">
+        <button class="colorBtn" data-color = "black" data-type="color"></button>
+        <button class="colorBtn" data-color = "red" data-type="color"></button>
+        <button class="colorBtn" data-color = "yellow" data-type="color"></button>
+        <button class="colorBtn" data-color = "blue" data-type="color"></button>
+        <button class="colorImg" data-type="image"></button>
+    </div>
+
 
     <script>
         // canvas 지원 여부
@@ -79,6 +107,61 @@
         imgElem.addEventListener('load', () => {
             context4.drawImage(imgElem, 50, 50);
         });
+
+
+        // 그림판
+        const convas5 = document.querySelector('.canvasPaint');
+        context5 = convas5.getContext('2d');
+        const control = document.querySelector('.control');
+        const colorImg = document.querySelector('.colorImg');
+        const colorImgElem = document.createElement('img');
+        colorImgElem.src  = 'momin.png';
+
+        let drawingMode = false; //true 일때만 paint
+        let colorVal = 'black';
+        let brush = "color"; //'color' or 'image'
+
+        // mouseup
+        function down(){
+            drawingMode = true;
+        }
+        // mousemove
+        function paint(e){
+            if(!drawingMode) return;
+
+            
+            switch( brush ){
+                case 'color':
+                context5.beginPath();
+                context5.arc(e.layerX, e.layerY, 5, 0, Math.PI*2, false);
+                context5.fill();
+                    break;
+                case 'image':
+                context5.drawImage(colorImgElem, e.layerX, e.layerY, 30, 30);
+                    break;
+            }
+
+            
+        }
+
+        // color 변환
+        function setColor(e){
+            brush = e.target.getAttribute('data-type');
+            colorVal = e.target.getAttribute('data-color');
+            context5.fillStyle = colorVal;
+            console.log(brush);
+        }
+
+        // mousedown
+        function up(){
+            drawingMode = false;
+        }
+        
+        convas5.addEventListener('mousedown', down);
+        convas5.addEventListener('mousemove', paint);
+        convas5.addEventListener('mouseup', up);
+        control.addEventListener('click', setColor);
+
 
     </script>
 
