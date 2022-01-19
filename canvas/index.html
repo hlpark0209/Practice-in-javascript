@@ -52,6 +52,8 @@
         <button class="colorBtn" data-color = "blue" data-type="color"></button>
         <button class="colorImg" data-type="image"></button>
     </div>
+    <button class="save">SAVE</button>
+    <div class="resultImg"></div>
 
 
     <script>
@@ -116,6 +118,8 @@
         const colorImg = document.querySelector('.colorImg');
         const colorImgElem = document.createElement('img');
         colorImgElem.src  = 'momin.png';
+        const saveBtn = document.querySelector('.save');
+        const resultImg = document.querySelector('.resultImg');
 
         let drawingMode = false; //true 일때만 paint
         let colorVal = 'black';
@@ -149,7 +153,6 @@
             brush = e.target.getAttribute('data-type');
             colorVal = e.target.getAttribute('data-color');
             context5.fillStyle = colorVal;
-            console.log(brush);
         }
 
         // mousedown
@@ -157,11 +160,21 @@
             drawingMode = false;
         }
         
+        // image 저장
+        function CreateImage(){
+            const url = convas5.toDataURL('image/png');
+            const img = new Image();
+            img.src = url;
+            resultImg.appendChild(img);
+            
+            console.log(url);
+        }
+
         convas5.addEventListener('mousedown', down);
         convas5.addEventListener('mousemove', paint);
         convas5.addEventListener('mouseup', up);
         control.addEventListener('click', setColor);
-
+        saveBtn.addEventListener('click', CreateImage);
 
     </script>
 
