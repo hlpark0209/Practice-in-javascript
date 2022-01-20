@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0; font-size:0.8rem;
+    background: #383c45;
+    -ms-overflow-style: none;
+}
+ul {list-style: none;}
+#wrap{
+    margin: 50px auto;
+    width: 600px;
+    height: auto;
+}
+#logo{
+    width: 100px;
+    margin: 0 auto;
+}
+#logo:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+}
+#logo img{
+    padding: 40px 0 0 0;
+}
+ul#filter_btn{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 65%;
+    height: 55px;
+    margin: 0 auto;
+    padding: 0px;
+}
+#filter_btn li {
+    width: 16.6%;
+    margin: 5px;
+}
+#filter_btn li a {
+    text-decoration: none; 
+    vertical-align: middle;
+}
+#filter_btn li a img{
+    width: 85%;
+}
+
+#filter_btn li a img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+    transition: transform 300ms ease-in-out;
+}
+#filter_btn .blue, .yellow, .pink{
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 3.2;
+    color: #1a1a1a;
+}
+#filter_btn .blue{
+    background:cornflowerblue;
+}
+#filter_btn .yellow{
+    background:yellow;
+}
+#filter_btn .pink{
+    background:palevioletred;
+}
+
+
+#list{
+    width: 65%;
+    height: 500px;
+    margin: 15px auto;
+    overflow-y:scroll;
+}
+#list::-webkit-scrollbar {
+    display: none; 
+}
+#list .clothes_list{
+    width: 100%;
+    padding: 0px;
+}
+#list .clothes_list li{
+    width: 100%;
+    border-radius: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+#list .clothes_list li .content_wrap{
+    display: flex;
+    width: 80%;
+    padding: 10px;
+
+}
+#list .clothes_list li .content_wrap img{
+    width: 13%;
+}
+#list .clothes_list li .content_wrap span{
+    font-size: 1rem;
+    color: #1a1a1a;
+    font-weight: 500;
+    vertical-align: middle;
+    padding: 10px 10px 10px 20px;
+}
