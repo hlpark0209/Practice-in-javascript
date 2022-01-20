@@ -52,7 +52,7 @@
             "image" : "../img/yellow_p.png"
         },
         {
-            "type" : "tshirts",
+            "type" : "skirt",
             "gender" : "female",
             "size": "small",
             "color" : "yellow",
