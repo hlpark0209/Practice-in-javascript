@@ -1,6 +1,4 @@
 'use strict';
-let array =[];
-
 //data.json 파일 호출
 function loadItems(){
     return fetch('data/data.json')
@@ -25,8 +23,8 @@ function displayItems(items){
     }
 }
 
-// click event 적용
 
+//data-key는 type에 해당 , data-value는 해당  type의 값에 해당
 function onclickBtn(e, items){
     const key = e.target.dataset.key;
     const value = e.target.dataset.value;
@@ -34,13 +32,11 @@ function onclickBtn(e, items){
     if( key == null ){
         return;
     } else{
-        displayItems(items.filter( item => item[key] === value));
+        displayItems(items.filter( e => e[key] === value));
     }
 }
 
-
-
-
+// click event 적용
 function filterItems(items){
     const btn = document.querySelector('.menuBtns');
     btn.addEventListener('click', e => onclickBtn (e, items));
