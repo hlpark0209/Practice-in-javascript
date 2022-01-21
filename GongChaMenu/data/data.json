@@ -1,0 +1,100 @@
+{
+    "items" : [
+        {
+            "type" : "Best",
+            "image" : "../imgs/best1.png"
+        },
+        {
+            "type" : "Best",
+            "image" : "../imgs/best2.png"
+        },
+        {
+            "type" : "Best",
+            "image" : "../imgs/best3.png"
+        },
+        {
+            "type" : "Best",
+            "image" : "../imgs/best4.png"
+        },
+        {
+            "type" : "Best",
+            "image" : "../imgs/best5.png"
+        },
+        {
+            "type" : "Best",
+            "image" : "../imgs/best6.png"
+        },
+        
+
+        {
+            "type" : "Original",
+            "image" : "../imgs/tea1.png"
+        },
+        {
+            "type" : "Original",
+            "image" : "../imgs/tea2.png"
+        },
+        {
+            "type" : "Original",
+            "image" : "../imgs/tea3.png"
+        },
+        {
+            "type" : "Original",
+            "image" : "../imgs/tea4.png"
+        },
+
+
+        {
+            "type" : "Milk",
+            "image" : "../imgs/milktea1.png"
+        },
+        {
+            "type" : "Milk",
+            "image" : "../imgs/milktea2.png"
+        },
+        {
+            "type" : "Milk",
+            "image" : "../imgs/milktea3.png"
+        },
+        {
+            "type" : "Milk",
+            "image" : "../imgs/milktea4.png"
+        },
+
+
+        {
+            "type" : "Jewelry",
+            "image" : "../imgs/jewely1.png"
+        },
+        {
+            "type" : "Jewelry",
+            "image" : "../imgs/jewely2.png"
+        },
+        {
+            "type" : "Jewelry",
+            "image" : "../imgs/jewely3.png"
+        },
+
+
+        {
+            "type" : "Coffee",
+            "image" : "../imgs/coffee1.png"
+        },
+        {
+            "type" : "Coffee",
+            "image" : "../imgs/coffee2.png"
+        },
+        {
+            "type" : "Coffee",
+            "image" : "../imgs/coffee3.png"
+        },
+        {
+            "type" : "Coffee",
+            "image" : "../imgs/coffee4.png"
+        },
+        {
+            "type" : "Coffee",
+            "image" : "../imgs/coffee5.png"
+        }
+    ]
+}

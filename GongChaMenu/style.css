@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    color: #343434;
+}
+button{
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: transparent;
+    
+}
+.menuBtnContainer{
+    display: flex;
+    max-width: 1400px;
+    height: 80px;
+    margin: 0 auto;
+}
+.menuBtn{
+    flex-grow: 1;
+}
+.menuBtn:hover{
+    text-decoration: underline;
+    color: rgb(207, 1, 1);
+}
+
+.menuContainer{
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 1.3em;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.menuThumb{
+    display: flex;
+    flex-direction: column;
+    width:20%;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom:  1px solid #ddd;
+}
+.menuThumb:hover{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 0;
+}
