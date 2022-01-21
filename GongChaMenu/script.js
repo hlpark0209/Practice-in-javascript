@@ -24,7 +24,7 @@ function displayItems(items){
 }
 
 
-//data-key는 type에 해당 , data-value는 해당  type의 값에 해당
+//data-key는 type에 해당 , data-value는 해당 type의 값에 해당
 function onclickBtn(e, items){
     const key = e.target.dataset.key;
     const value = e.target.dataset.value;
@@ -39,6 +39,9 @@ function onclickBtn(e, items){
 // click event 적용
 function filterItems(items){
     const btn = document.querySelector('.menuBtns');
+    const logo = document.querySelector('.logo');
+
+    logo.addEventListener('click', () => displayItems(items));
     btn.addEventListener('click', e => onclickBtn (e, items));
     
 }

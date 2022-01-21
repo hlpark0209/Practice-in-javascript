@@ -20,6 +20,7 @@ button{
 }
 .logo img{
     width: 100%;
+    cursor: pointer;
 }
 .menuBtnContainer{
     width: 100%;
