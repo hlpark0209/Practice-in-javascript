@@ -11,21 +11,30 @@
     <title>Gong Cha</title>
 </head>
 <body>
+    <!-- logo -->
+    <header>
+        <div class="logo">
+            <img src="imgs/logo.png" alt="logo" >
+        </div>
+    </header>
+
     <!-- menu -->
     <nav class="menuBtnContainer">
-        <button class="menuBtn best">Best Combination</button>
-        <button class="menuBtn tea">Original Tea</button>
-        <button class="menuBtn milkTea">Milk Tea</button>
-        <button class="menuBtn jewelry">Jewelry</button>
-        <button class="menuBtn coffe">Coffee</button>
+        <div class="menuBtns">
+            <button class="menuBtn best" data-key="type" data-value="Best">Best Combination</button>
+            <button class="menuBtn tea" data-key="type" data-value="Original">Original Tea</button>
+            <button class="menuBtn milkTea" data-key="type" data-value="Milk">Milk Tea</button>
+            <button class="menuBtn jewelry" data-key="type" data-value="Jewelry">Jewelry</button>
+            <button class="menuBtn coffe" data-key="type" data-value="Coffee">Coffee</button>
+        </div>
     </nav>
 
     <!-- menu contents -->
     <section class="menuContainer">
-        <div class="menuThumb">
+        <!-- <div class="menuThumb">
             <img src="imgs/best1.png" alt="" class="menuImg">
             <p>블랙 밀크티+펄</p>
-        </div>
+        </div> -->
         
     
     <!-- menu detail -->

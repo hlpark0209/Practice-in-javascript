@@ -2,99 +2,121 @@
     "items" : [
         {
             "type" : "Best",
-            "image" : "../imgs/best1.png"
+            "image" : "../imgs/best1.png",
+            "title" : "블랙 밀크티+펄"
         },
         {
             "type" : "Best",
-            "image" : "../imgs/best2.png"
+            "image" : "../imgs/best2.png",
+            "title" : "얼그레이티+펄"
         },
         {
             "type" : "Best",
-            "image" : "../imgs/best3.png"
+            "image" : "../imgs/best3.png",
+            "title" : "제주녹차티+펄"
         },
         {
             "type" : "Best",
-            "image" : "../imgs/best4.png"
+            "image" : "../imgs/best4.png",
+            "title" : "망고요구르트+펄"
         },
         {
             "type" : "Best",
-            "image" : "../imgs/best5.png"
+            "image" : "../imgs/best5.png",
+            "title" : "파스타치오 밀크티+펄"
         },
         {
             "type" : "Best",
-            "image" : "../imgs/best6.png"
+            "image" : "../imgs/best6.png",
+            "title" : "타로밀크티+펄"
         },
         
 
         {
             "type" : "Original",
-            "image" : "../imgs/tea1.png"
+            "image" : "../imgs/tea1.jpg",
+            "title" : "블랙 밀크티"
         },
         {
             "type" : "Original",
-            "image" : "../imgs/tea2.png"
+            "image" : "../imgs/tea2.jpg",
+            "title" : "우롱차"
         },
         {
             "type" : "Original",
-            "image" : "../imgs/tea3.png"
+            "image" : "../imgs/tea3.jpg",
+            "title" : "얼그레이티"
         },
         {
             "type" : "Original",
-            "image" : "../imgs/tea4.png"
+            "image" : "../imgs/tea4.jpg",
+            "title" : "쟈스민티"
         },
 
 
         {
             "type" : "Milk",
-            "image" : "../imgs/milktea1.png"
+            "image" : "../imgs/milktea1.jpg",
+            "title" : "블랙밀크티"
         },
         {
             "type" : "Milk",
-            "image" : "../imgs/milktea2.png"
+            "image" : "../imgs/milktea2.jpg",
+            "title" : "타로밀크티"
         },
         {
             "type" : "Milk",
-            "image" : "../imgs/milktea3.png"
+            "image" : "../imgs/milktea3.jpg",
+            "title" : "초코밀크티"
         },
         {
             "type" : "Milk",
-            "image" : "../imgs/milktea4.png"
+            "image" : "../imgs/milktea4.png",
+            "title" : "그린밀크티"
         },
 
 
         {
             "type" : "Jewelry",
-            "image" : "../imgs/jewely1.png"
+            "image" : "../imgs/jewely1.png",
+            "title" : "딸기크러쉬 주얼리"
         },
         {
             "type" : "Jewelry",
-            "image" : "../imgs/jewely2.png"
+            "image" : "../imgs/jewely2.png",
+            "title" : "딸기젤리퐁 주얼리"
         },
         {
             "type" : "Jewelry",
-            "image" : "../imgs/jewely3.png"
+            "image" : "../imgs/jewely3.png",
+            "title" : "흑당밀크티 주얼리"
         },
 
 
         {
             "type" : "Coffee",
-            "image" : "../imgs/coffee1.png"
+            "image" : "../imgs/coffee1.jpg",
+            "title" : "아메리카노"
         },
         {
             "type" : "Coffee",
-            "image" : "../imgs/coffee2.png"
+            "image" : "../imgs/coffee2.jpg",
+            "title" : "카페라떼"
         },
         {
             "type" : "Coffee",
-            "image" : "../imgs/coffee3.png"
+            "image" : "../imgs/coffee3.png",
+            "title" : "카페모카"
         },
         {
             "type" : "Coffee",
-            "image" : "../imgs/coffee4.png"
+            "image" : "../imgs/coffee4.png",
+            "title" : "카라멜 마끼아또"
         },
         {
             "type" : "Coffee",
-            "image" : "../imgs/coffee5.png"
+            "image" : "../imgs/coffee5.png",
+            "title" : "카페모카"
         }
     ]
 }
