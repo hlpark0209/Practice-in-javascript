@@ -12,6 +12,7 @@ function loadItems(){
 function displayItems(items){
     const menuContainer = document.querySelector(".menuContainer");
     menuContainer.innerHTML = items.map( (item) => createHTML(item)).join('');
+
         
     function createHTML(e){
         return `
